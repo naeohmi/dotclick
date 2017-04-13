@@ -1,5 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i');
+/*
+colors:
+red: rgba(232,0,0,1)
+bright yellow: rgba(255,255,0,1)
+bright-green: rgba(3,185,6,1)
+bright-blue(light): rgba(0,162,255,1)
+bright-blue(dark): rgba(36,5,242,1)
+bright-purpley: rgba(255,69,203,1)
 
+orange: rgba(244,60,11,1)
+purple: rgba(151,46,251,1)
+light-teal: rgba(142,255,208,1)
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Quattrocento+Sans:400,400i,700,700i');
 html {
     background-color: black;
     color: white;
@@ -7,47 +20,56 @@ html {
     width: 100%;
     height: 100%;
 }
-
-header {
-    width: 500px;
-    height: 500px;
-    text-align: center;
-    background-color: rgba(0,255,0,0.6);
-    margin: 50px;
-    border-radius: 20%;
+header h1 {
+    margin-top: 10vh;
+    font-size: 8vmin;
+    text-shadow: 2px 2px black;
+    font-family: 'Comfortaa', cursive;
 }
 
-
 #open {
-    width: 150px;;
-    height: 150px;
-    background-color: rgba(0,255,0,0.8);
+    width: 80vh;
+    height: 80vh;
+    text-align: center;
+    background-color: rgba(151,46,251,.8);
+    margin: 10vh;
+    border-radius: 20%;
     color: white;
-    
-} 
+    position: absolute;
+}
+
+#open img {
+    position: relative;
+    width: 60%;
+    border-radius: 25%;
+    text-align: center;
+}
 
 footer {
     width: 100%;
     height: 3vh;
     bottom: 0px;
     position: fixed;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
 }
+
 footer p {
-    font-size: 3vim;
+    font-size: 2vmin;
     color: black;
 }
 
-footer p a, span {
-    color: hotpink;
+footer p a,
+span {
+    color: rgba(142,255,208,1);
     text-decoration: none;
 }
 
 footer span:hover {
     color: pink;
 }
+
 footer p a:hover {
-    color: purple;
+    color: rgba(142,255,208,1);
     font-weight: 700i;
 }
