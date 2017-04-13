@@ -1,6 +1,5 @@
 class Dot {
     constructor() {
-        this.animateDot();
 
     }
     randomNum(min, max) {
@@ -20,30 +19,42 @@ class Dot {
         };
     };
 
-    animateDot() {
-        let random = this.move();
-        //        console.log(random);
-        $('div').animate({
+    animation() {
+        
+            for (let i = 0; i <= 25; i++){
+                let random = this.move();
+            let currentDot = document.querySelectorAll('.dot');
+//            this.animation(currentDot);
+                $(currentDot[i]).animate({
             top: random.nw,
             left: random.nh
-        }, 800, function () {
-            this.animateDot();
+        }, 500, () => { //fat arrow doesnt re-assign this keyword! yay fat arrow
+            this.animation();
         });
-    };
+    
+            };
+    }
     //make divs - each div is an individual dot 
     makeDot() {
-        for (let i = 0; i <= 50; i++) {
-            let randN = this.randomNum(1, 50);
-            //            console.log(randN);
-            let newDot = document.createElement('div');
+        for (let i = 0; i <= 25; i++) {
+            let randN = this.randomNum(1, 25);
+            let newDot = document.createElement('span');
             newDot.setAttribute('class', 'dot');
             newDot.setAttribute('info', randN); //unique dot number
             newDot.setAttribute('id', 'id' + i);
+            
             //            newDot.addEventListener('click', )
-            this.animateDot();
             document.querySelector('#playScreenId').appendChild(newDot);
         }
     }
+    animateDot() {
+        for (let i = 0; i <= 25; i++){
+            let currentDot = document.getElementById('id' + i);
+            this.animation(currentDot);
+        }
+    }
+        
+    
 
 
     //set the colors of the dots to a unique ID 

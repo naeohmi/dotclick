@@ -19,7 +19,7 @@ class Play {
 
         let makeDots = new Dot();
         makeDots.makeDot();
-        //        console.log(playScreenId)
+        makeDots.animation();
 
     }
     //generate a key to render on the bottom of the screen 
