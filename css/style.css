@@ -55,16 +55,16 @@ header h1 {
 }
 
 #keyBox {
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 13vh;
     background-color: rgba(255, 255, 255, 0.8);
-    bottom: -600px;
+    bottom: 0;
     justify-content: center;
 }
 
 #keyBox h1 {
-    margin-top: 5%;
+    margin-top: 2vh;
     color: white;
     text-shadow: 1.5px 1.5px black;
     font-size: 15vim;
@@ -83,7 +83,8 @@ header h1 {
     width: 90%;
     height: 100px;
     position: relative;
-    margin: 3vh;
+    margin-bottom: 4vh;
+    background-color: blue;
 }
 .keyClass {
     width: 15px;
@@ -93,6 +94,7 @@ header h1 {
     margin: 2vh;
     padding: 2vh;
     float: right;
+    position: relative;
 }
 footer {
     width: 100%;
@@ -123,4 +125,11 @@ footer span:hover {
 footer p a:hover {
     color: rgba(142,255,208,1);
     font-weight: 700i;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: yellow;
 }
