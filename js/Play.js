@@ -55,7 +55,6 @@ class Play {
             let colorsKeys = Object.keys(colors);
             newColorKey.setAttribute('color', colorsKeys[i]);
             colorsKeys.forEach((d) => {
-//                console.log(colors[d]);
                 newColorKey.setAttribute('style', `background-color: ${colors[d]}`);
             });
             document.querySelector('#keyBox').appendChild(newColorKey);

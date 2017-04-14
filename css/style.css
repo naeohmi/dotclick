@@ -5,9 +5,9 @@ bright yellow: rgba(255,255,0,1)
 bright-green: rgba(3,185,6,1)
 bright-blue(light): rgba(0,162,255,1)
 bright-blue(dark): rgba(36,5,242,1)
-bright-purpley: rgba(255,69,203,1)
+bright-pink: rgba(255,69,203,1)
 
-orange: rgba(244,60,11,1)
+orange: rgba(255,127,0,1)
 purple: rgba(151,46,251,1)
 light-teal: rgba(142,255,208,1)
 */
@@ -91,12 +91,11 @@ header h1 {
 .keyClass {
     width: 15px;
     height: 15px;
-/*    margin-top: 10px;*/
     border-radius: 10%;
     margin: 2vh;
     padding: 2vh;
     float: right;
-/*    position: absolute;*/
+    border: 1px solid black;
 }
 footer {
     width: 100%;
@@ -130,11 +129,19 @@ footer p a:hover {
 }
 
 .dot {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 1px solid white;
-    background-color: rgba(0,162,255,.8);
-/*    display: inline-block;*/
     position: absolute;
+    padding: 10px;
+}
+.dot:hover {
+    width: 50px;
+    height: 40px;
+}
+
+.clicked {
+    transition: all 0.3s;
+    opacity: 0;
 }
