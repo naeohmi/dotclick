@@ -57,19 +57,10 @@ class Dot {
                 newDot.setAttribute('id', `${randN}`); //unique dot number
 
                 newDot.addEventListener('click', () => {
+                    let clickArray = [];
                     newDot.setAttribute('class', 'clicked');
-                    
-                    let clickd = document.querySelectorAll('.clicked');
-                    let keyClass = document.querySelectorAll('.keyClass');
-//                    console.log(clickd.getAttribute('id'));
-                    
-                    if ((clicked.length !== 0) && (clicked.id === keyClass.id)) {
-                        console.log('whoohoo true');
-                        this.winStatus = true;
-                    } else {
-                        this.winStatus = false;
-                    }
-
+                        newDot.push(clickArray);
+                    console.log(clickArray);
                 });
             };
             document.querySelector('#playScreenId').appendChild(newDot);

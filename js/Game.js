@@ -22,6 +22,28 @@ class Game {
         let screen = document.getElementById('open');
         screen.innerHTML = '';
     }
+    
+    
+    //checks to see if colors clicked in the correct key order
+    win() {
+//        console.log('hello');
+        let clicked = document.querySelectorAll('.clicked');
+        let keyClass = document.querySelectorAll('.keyClass');
+//        console.log(clicked, keyClass);
+
+        if ((clicked.length !== 0) && (clicked.length === keyClass.length)) {
+            console.log(keyClass.length);
+
+            for (let i = 0; i <= keyClass.length; i++) {
+//                console.log(i);
+                let keyId = document.querySelector('.clicked');
+                let dotId = document.querySelector('.clicked');
+                console.log(keyId);
+                console.log(dotId);
+            }
+        }
+    }
+    
     clickStart() {
         let start = document.querySelector('#start');
         start.addEventListener('click', function () {
@@ -34,25 +56,13 @@ class Game {
             startNow.info();
             startNow.timer();
         });
+        this.win();
     }
 
     //checks to see if colors clicked in the correct key order
-    win() {
-        let clicked = document.querySelectorAll('.clicked');
-        let keyClass = document.querySelectorAll('.keyClass');
-
-        if ((clicked.length != 0) && (clicked.length === keyClass.length)) {
-            console.log(keyClass.length);
-
-            for (let i = 0; i <= keyClass.length; i++) {
-                console.log(i);
-                let keyId = document.querySelector('.clicked');
-                let dotId = document.querySelector('.clicked');
-                console.log(keyId);
-                console.log(dotId);
-            }
-        }
-    }
+    
+        
+    
     //destructur-ing
 
     //check what level the game is currently in play at.
