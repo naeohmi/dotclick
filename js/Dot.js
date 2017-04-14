@@ -33,7 +33,7 @@ class Dot {
     }
     //make divs - each div is an individual dot with a random color
     makeDot() {
-        for (let i = 0; i <= 10; i++) {
+        for (let i = 0; i <= 25; i++) {
             let randN = this.randomNum(0, 7);
             let newDot = document.createElement('span');
             
@@ -50,7 +50,7 @@ class Dot {
             let colorArray = [colors.c0, colors.c1, colors.c2, colors.c3, colors.c4, colors.c5, colors.c6, colors.c7];
             let colorArrayKeys = Object.keys(colors);
 
-            for (let j = 0; j <= 10; j++) {
+            for (let j = 0; j <= 25; j++) {
                 newDot.setAttribute('style', `background-color: ${colorArray[randN]}`)
 
                 newDot.setAttribute('class', 'dot');

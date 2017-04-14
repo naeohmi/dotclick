@@ -24,7 +24,7 @@ class Play {
     key() {
         let keyBox = document.createElement('div');
         keyBox.setAttribute('id', 'keyBox');
-        keyBox.innerHTML = `<h1>Color Key</h1>`;
+        keyBox.innerHTML = `<h1>Click dots in this order:</h1>`;
         document.querySelector('#playScreenId').appendChild(keyBox);
         
         let colors = {
@@ -55,31 +55,30 @@ class Play {
         info.setAttribute('id', 'info');
         info.innerHTML = 
             `<img src="images/logo.png">
-             <div id="timer"></div>
-             <img src="images/naeohmi.png">
-             <img src="images/naeohmi.png">
-             <img src="images/naeohmi.png">
-            `
+             <div id="timer"></div>`
         document.querySelector('aside').appendChild(info);
     }
     
     timer() {
-        let timer = {};
-        this.timer.count = () => {
-            let m = Math.floor(this.timer.length / (60 * 1000));
-            let s = (this.timer.length / 1000) - (this.m * 60);
-            if (this.s < 10) {
-                this.s = `0 ${this.s}`;
-            }
-            if (this.timer.length <= 0) {
+        if (document.body.contains(document.querySelector('#timer'))) {
+            let timer = {};
+            this.timer.count = function () {
+                let m = Math.floor(this.timer.length / (60 * 1000));
+                let s = (this.timer.length / 1000) - (m * 60);
+                if (s < 10) {
+                    s = '0' + s;
+                }
+                if (this.timer.length <= 0) {
+                    document.querySelector('aside').innerHTML = 
+                        `<h1 id="zero">0!</h1>`;
+                    clearInterval(this.timer.countInt);
+                }
+                this.timer.length -= 1000;
                 document.querySelector('#timer').innerHTML = 
-                    `<h1 id="zero">0!</h1>`
-                clearInterval(this.timer.countInt);
-            }
-            this.timer.length -= 1000;
-            document.querySelector('#timer').innerHTML = this.m + ':' + this.s;
+                    `<p>${m} : ${s}</p>`;
         }
-        this.timer.countInt = setInterval(this.timer.count, 1000);
+        this.timer.countInt = setInterval(this.timer.count, 2000);
+        }
     }
     
 }

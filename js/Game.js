@@ -14,7 +14,7 @@ class Game {
             `<h1>Welcome to:</h1>
              <img src="images/logo.png"><br /><br />
              <p>Click the dots in the right order and advance to the next level!</p><br />
-             <button id="start">Start Game</button>`;
+             <button id="start">Click to Start!</button>`;
         document.querySelector('header').appendChild(open);
         this.clickStart();
     }
@@ -33,6 +33,7 @@ class Game {
             startNow.playScreen();
             startNow.key();
             startNow.info();
+            startNow.timer();
         });
     }
     //checks to see if colors clicked in the correct key order

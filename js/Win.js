@@ -9,7 +9,7 @@ class Win {
     win() {
         let clicked = document.querySelectorAll('.clicked');
         let keyClass = document.querySelectorAll('.keyClass');
-
+        console.log('win init');
 
         for (let i = 0; i <= keyClass.length; i++) {
             let keyId = document.getElementById(`k[i]`);
