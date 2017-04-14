@@ -3,6 +3,7 @@ class Game {
         this.startScreen();
         this.playStatus = true;
         this.levelNum = 0;
+        this.check();
     }
     //make the start screen render
     //with welcome msg, game instructions, and start button to click 
@@ -31,7 +32,20 @@ class Game {
             let startNow = new Play();
             startNow.playScreen();
             startNow.key();
+            startNow.info();
         });
+    }
+    //checks to see if colors clicked in the correct key order
+    check() {
+        console.log('checking');
+        let clicked = document.querySelectorAll('.clicked');
+        let keyClass = document.querySelectorAll('.keyClass');
+        console.log(clicked);
+        if ((clicked.length != 0) && clicked.length === keyClass.length) {
+            let winCheck = new Win();
+            console.log('win');
+            winCheck.win();
+        }
     }
 
     //check what level the game is currently in play at.

@@ -26,28 +26,38 @@ class Dot {
             $(currentDot[i]).animate({
                 top: random.nw,
                 left: random.nh
-            }, 1300, () => { //fat arrow doesnt re-assign this keyword! yay fat arrow
+            }, 2200, () => { //fat arrow doesnt re-assign this keyword! yay fat arrow
                 this.animation();
             });
         };
     }
     //make divs - each div is an individual dot with a random color
     makeDot() {
-        for (let i = 0; i <= 25; i++) {
-            let randN = this.randomNum(1, 25);
+        for (let i = 0; i <= 10; i++) {
+            let randN = this.randomNum(0, 7);
             let newDot = document.createElement('span');
+            
+            let colors = {
+                c0: 'rgba(232,0,0,.8)', //red
+                c1: 'rgba(255,69,203,.6)', //pink
+                c2: 'rgba(255,127,0,.8)', //orange
+                c3: 'rgba(255,255,0,.8)', //yellow
+                c4: 'rgba(3,185,6,.8)', //green
+                c5: 'rgba(142,255,208,.8)', //teal
+                c6: 'rgba(36,5,242,.8)', //blue
+                c7: 'rgba(151,46,251,.8)' //purple
+            };
+            let colorArray = [colors.c0, colors.c1, colors.c2, colors.c3, colors.c4, colors.c5, colors.c6, colors.c7];
+            let colorArrayKeys = Object.keys(colors);
 
-            let colors = ['rgba(232,0,0,.8)', 'rgba(255,255,0,.8)', 'rgba(3,185,6,.8)', 'rgba(255,69,203,.8)', 'rgba(36,5,242,.6)', 'rgba(255,127,0,.7)', 'rgba(151,46,251,.8)', 'rgba(142,255,208,.8)'];
-            for (let j = 0; j <= 25; j++) {
-                newDot.setAttribute('style', `background-color: ${colors[this.randomNum(0,7)]}`)
+            for (let j = 0; j <= 10; j++) {
+                newDot.setAttribute('style', `background-color: ${colorArray[randN]}`)
 
-                newDot.setAttribute('class', 'dot'); 
-                newDot.setAttribute('info', randN); //unique dot number
-                newDot.setAttribute('id', 'id' + i);
+                newDot.setAttribute('class', 'dot');
+                newDot.setAttribute('id', `d${randN}`); //unique dot number
 
                 newDot.addEventListener('click', () => {
                     newDot.setAttribute('class', 'clicked');
-                    console.log('clicked!');
                 });
             };
             document.querySelector('#playScreenId').appendChild(newDot);
