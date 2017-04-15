@@ -1,6 +1,7 @@
 class Dot {
     constructor() {
-        this.winStatus = false;
+        this.playStatus = false;
+        this.score = 0;
 
     }
     randomNum(min, max) {
@@ -34,10 +35,11 @@ class Dot {
     }
     //make divs - each div is an individual dot with a random color
     makeDot() {
-        for (let i = 0; i <= 25; i++) {
+        
+        for (let i = 0; i <= 10; i++) {
             let randN = this.randomNum(0, 6);
             let newDot = document.createElement('span');
-            
+
             let colors = {
                 c0: 'rgba(232,0,0,.8)', //red
                 c1: 'rgba(255,69,203,.6)', //pink
@@ -50,22 +52,22 @@ class Dot {
             let colorArray = [colors.c0, colors.c1, colors.c2, colors.c3, colors.c4, colors.c5, colors.c6];
             let colorArrayKeys = Object.keys(colors);
 
-            for (let j = 0; j <= 25; j++) {
-                newDot.setAttribute('style', `background-color: ${colorArray[randN]}`)
+            newDot.setAttribute('style', `background-color: ${colorArray[randN]}`)
 
-                newDot.setAttribute('class', 'dot');
-                newDot.setAttribute('id', `${randN}`); //unique dot number
+            newDot.setAttribute('class', 'dot');
+            newDot.setAttribute('id', `${randN}`); //unique dot number
 
-                newDot.addEventListener('click', () => {
-                    let clickArray = [];
-                    newDot.setAttribute('class', 'clicked');
-                        newDot.push(clickArray);
-                    console.log(clickArray);
-                });
-            };
-            document.querySelector('#playScreenId').appendChild(newDot);
+            newDot.addEventListener('click', () => {
+                newDot.setAttribute('class', 'clicked');
+                this.playStatus = true;
+                let scoreBoard = document.getElementById('score-board');
+                scoreBoard.innerHTML = `<p>${this.score += 2}</p>`;
+            });
+            document.querySelector('html').appendChild(newDot);
         }
     }
+
+    
     animateDot() {
         for (let i = 0; i <= 25; i++) {
             let currentDot = document.getElementById('id' + i);

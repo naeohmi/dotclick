@@ -1,6 +1,6 @@
 class Play {
     constructor() {
-        //        this.playScreen();
+                this.playScreen();
         //        this.key();
     }
     //sets up the screen during game play and renders it (will be initialized in Game.startClick())
@@ -8,10 +8,11 @@ class Play {
         let playScreenId = document.createElement('div');
         playScreenId.setAttribute('id', 'playScreenId');
         document.querySelector('main').appendChild(playScreenId);
-
-        let makeDots = new Dot();
-        makeDots.makeDot();
-        makeDots.animation();
+    }
+    makeDots() {
+        let getDots = new Dot();
+        getDots.makeDot();
+        getDots.animation();
     }
     //generate a key to render on the bottom of the screen 
     //key to include randomly generated divs that each display a unique color
@@ -23,7 +24,7 @@ class Play {
         let keyBox = document.createElement('div');
         keyBox.setAttribute('id', 'keyBox');
         keyBox.innerHTML = `<h1>Click dots in this order:</h1>`;
-        document.querySelector('#playScreenId').appendChild(keyBox);
+        document.querySelector('html').appendChild(keyBox);
 
         let colors = {
             c0: 'rgba(232,0,0,.8)', //red
@@ -52,7 +53,8 @@ class Play {
         info.setAttribute('id', 'info');
         info.innerHTML =
             `<img src="images/logo.png">
-             <div id="timer"></div>`
+             <div id="timer">timer</div>
+             <div id="score-board">score</div`
         document.querySelector('aside').appendChild(info);
     }
     
@@ -79,5 +81,4 @@ class Play {
             timer.countInt = setInterval(timer.count, 1000);
         }
     }
-
 }
