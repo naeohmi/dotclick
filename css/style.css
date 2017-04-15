@@ -14,7 +14,7 @@ light-teal: rgba(142,255,208,1)
 
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Quattrocento+Sans:400,400i,700,700i');
 html {
-    background-color: black;
+    background-color: white;
     color: white;
     font-family: 'Comfortaa', sans-serif;
 }
@@ -62,6 +62,7 @@ html {
     background-color: rgba(142,255,208,1);
 }
 
+/*
 #playScreenId {
     width: 99%;
     height: 99%;
@@ -69,6 +70,7 @@ html {
     margin: 1vh;
     position: absolute;
 }
+*/
 #keyBox {
     position: fixed;
     width: 100%;
@@ -162,7 +164,7 @@ footer {
     height: 3vh;
     bottom: 0px;
     position: fixed;
-    background-color: black;
+    background-color: rgba(0,0,0,.7);
     text-align: right;
 }
 footer p {
@@ -183,19 +185,56 @@ footer p a:hover {
     color: rgba(142,255,208,1);
     font-weight: 700i;
 }
-.dot {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+.dot1 {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
     position: absolute;
-    padding: 10px;
+    animation: move1 5s infinite;
 }
-.dot:hover {
-    width: 90px;
-    height: 90px;
+
+.dot1:hover {
+    animation: move1 1s infinite;
 }
+.dot2 {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    position: absolute;
+    animation: move2 10s infinite;
+}
+
+.dot2:hover {
+    animation: move2 2s infinite;
+}
+.dot3 {
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    position: absolute;
+    animation: move1 7s infinite;
+}
+
 .clicked {
     transition: all 0.3s;
     opacity: 0;
-/*    border: 2px solid white;*/
 }
+
+@keyframes move1 {
+  25% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes move2 {
+    30% {
+        transform: rotate(360deg);
+    }
+    70% {
+        transform: rotate(180deg);
+    }
+}
+
+

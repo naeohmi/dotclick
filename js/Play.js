@@ -11,8 +11,13 @@ class Play {
     }
     makeDots() {
         let getDots = new Dot();
-        getDots.makeDot();
+        getDots.makeDot1();        
+        //set timeout
+        getDots.makeDot2();
+        getDots.makeDot3();
         getDots.animation();
+        
+
     }
     //generate a key to render on the bottom of the screen 
     //key to include randomly generated divs that each display a unique color
