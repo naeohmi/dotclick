@@ -42,9 +42,9 @@ class Play {
                     s = '0' + s;
                 }
                 if (timer.length <= 0) {
-                    setTimeout(function () {
-                        document.querySelector('#playScreenId').innerHTML = '';
-                    }, 400);
+                    console.log('yes');
+                    let end = new Game();
+                    end.endScreen();
                     clearInterval(timer.countInt);
                 }
                 timer.length -= 1000;

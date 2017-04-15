@@ -85,7 +85,7 @@ class Dot {
                 let scoreBoard = document.getElementById('score-board');
                 scoreBoard.innerHTML = `<p>score:${this.score += 3}</p>`;
             });
-            document.querySelector('html').appendChild(newDot);
+            document.querySelector('#playScreenId').appendChild(newDot);
         }
     }
 
@@ -102,7 +102,7 @@ class Dot {
                 let scoreBoard = document.getElementById('score-board');
                 scoreBoard.innerHTML = `<p>score:${this.score += 2}</p>`;
             });
-            document.querySelector('html').appendChild(newDot);
+            document.querySelector('#playScreenId').appendChild(newDot);
         }
     }
     makeDot3() {
@@ -118,7 +118,7 @@ class Dot {
                 let scoreBoard = document.getElementById('score-board');
                 scoreBoard.innerHTML = `<p>score:${this.score += 1}</p>`;
             });
-            document.querySelector('html').appendChild(newDot);
+            document.querySelector('#playScreenId').appendChild(newDot);
         }
     }
 
@@ -127,5 +127,8 @@ class Dot {
             let currentDot = document.getElementById('id' + i);
             this.animation(currentDot);
         }
+    }
+    finalScore() {
+        return this.score;
     }
 }
