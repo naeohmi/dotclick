@@ -12,6 +12,17 @@ purple: rgba(151,46,251,1)
 light-teal: rgba(142,255,208,1)
 */
 
+/*
+cube colors
+red/pink: rgba(254,56,69,1) 
+#FE3845
+blue: rgba(48,44,103,1)
+#302C67
+teal: rgba(101,227,183,1)
+#65E3B7
+*/
+
+
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Quattrocento+Sans:400,400i,700,700i');
 html {
     background-color: white;
@@ -62,15 +73,15 @@ html {
     background-color: rgba(142,255,208,1);
 }
 
-/*
 #playScreenId {
     width: 99%;
     height: 99%;
     background-color: black;
     margin: 1vh;
     position: absolute;
+    background-image: url("/images/cube.gif");
 }
-*/
+/*
 #keyBox {
     position: fixed;
     width: 100%;
@@ -96,6 +107,8 @@ html {
     display: inline-block;
     font-weight: 400;    
 }
+*/
+/*
 .keyClass {
     width: 35px;
     height: 35px;
@@ -103,8 +116,9 @@ html {
     margin: 2vh;
     padding: 2vh;
     float: left;
-/*    border: 1px solid black;*/
+    border: 1px solid black;
 }
+*/
 aside {
     height: 100%;
     width: 13vh;

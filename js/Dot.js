@@ -2,7 +2,29 @@ class Dot {
     constructor() {
         this.playStatus = false;
         this.score = 0;
-
+        this.colors = {
+            c0: 'rgba(232,0,0,.8)', //red
+            c1: 'rgba(255,69,203,.9)', //pink
+            c2: 'rgba(254,56,69,.8)', //cubered 
+            c3: 'rgba(255,255,0,.9)', //yellow
+            c4: 'rgba(101,227,183,.9)', //cubeteal
+            c5: 'rgba(36,5,242,.8)', //blue
+            c6: 'rgba(151,46,251,.9)', //purple
+            c7: 'rgba(48,44,103,.9)', //cubeblue
+            c8: 'rgba(0,0,0,.8)' //black
+        };
+        this.colorArray = [
+            this.colors.c0,
+            this.colors.c1,
+            this.colors.c2,
+            this.colors.c3,
+            this.colors.c4,
+            this.colors.c5,
+            this.colors.c6,
+            this.colors.c7,
+            this.colors.c8
+        ];
+        this.colorArrayKeys = Object.keys(this.colors);
     }
     randomNum(min, max) {
         return Math.round(Math.random() * (max - min) + min);
@@ -27,19 +49,22 @@ class Dot {
             let dot1 = document.querySelectorAll('.dot1');
             let dot2 = document.querySelectorAll('.dot2');
             let dot3 = document.querySelectorAll('.dot3');
-            
+
             $(dot1[i]).animate({
-                top: random.nw + 150, left: random.nh
+                top: random.nw + 150,
+                left: random.nh
             }, 2000, () => {
                 this.animation();
             });
             $(dot2[i]).animate({
-                top: random.nw, left: random.nh + 70
+                top: random.nw,
+                left: random.nh + 70
             }, 3000, () => {
                 this.animation();
             });
             $(dot3[i]).animate({
-                top: random.nw, left: random.nh
+                top: random.nw,
+                left: random.nh
             }, 1500, () => {
                 this.animation();
             });
@@ -49,20 +74,9 @@ class Dot {
     //make divs - each div is an individual dot with a random color
     makeDot1() {
         for (let i = 0; i <= 10; i++) {
-            let randN = this.randomNum(0, 6);
+            let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
-            let colors = {
-                c0: 'rgba(232,0,0,.8)', //red
-                c1: 'rgba(255,69,203,.6)', //pink
-                c2: 'rgba(255,127,0,.8)', //orange
-                c3: 'rgba(255,255,0,.8)', //yellow
-                c4: 'rgba(3,185,6,.8)', //green
-                c5: 'rgba(36,5,242,.8)', //blue
-                c6: 'rgba(151,46,251,.8)' //purple
-            };
-            let colorArray = [colors.c0, colors.c1, colors.c2, colors.c3, colors.c4, colors.c5, colors.c6];
-            let colorArrayKeys = Object.keys(colors);
-            newDot.setAttribute('style', `border-bottom: 50px solid ${colorArray[randN]}`)
+            newDot.setAttribute('style', `border-bottom: 50px solid ${this.colorArray[randN]}`)
             newDot.setAttribute('class', 'dot1');
             newDot.setAttribute('id', `${randN}`); //unique dot number
             newDot.addEventListener('click', () => {
@@ -75,22 +89,11 @@ class Dot {
         }
     }
 
-       makeDot2() {
+    makeDot2() {
         for (let i = 0; i <= 10; i++) {
-            let randN = this.randomNum(0, 6);
+            let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
-            let colors = {
-                c0: 'rgba(232,0,0,.7)', //red
-                c1: 'rgba(255,69,203,.5)', //pink
-                c2: 'rgba(255,127,0,.7)', //orange
-                c3: 'rgba(255,255,0,.7)', //yellow
-                c4: 'rgba(3,185,6,.7)', //green
-                c5: 'rgba(36,5,242,.7)', //blue
-                c6: 'rgba(151,46,251,.7)' //purple
-            };
-            let colorArray = [colors.c0, colors.c1, colors.c2, colors.c3, colors.c4, colors.c5, colors.c6];
-            let colorArrayKeys = Object.keys(colors);
-            newDot.setAttribute('style', `border-bottom: 100px solid ${colorArray[randN]}`)
+            newDot.setAttribute('style', `border-bottom: 100px solid ${this.colorArray[randN]}`)
             newDot.setAttribute('class', 'dot2');
             newDot.setAttribute('id', `${randN}`); //unique dot number
             newDot.addEventListener('click', () => {
@@ -102,22 +105,11 @@ class Dot {
             document.querySelector('html').appendChild(newDot);
         }
     }
-          makeDot3() {
+    makeDot3() {
         for (let i = 0; i <= 10; i++) {
-            let randN = this.randomNum(0, 6);
+            let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
-            let colors = {
-                c0: 'rgba(232,0,0,.3)', //red
-                c1: 'rgba(255,69,203,.3)', //pink
-                c2: 'rgba(255,127,0,.3)', //orange
-                c3: 'rgba(255,255,0,.3)', //yellow
-                c4: 'rgba(3,185,6,.3)', //green
-                c5: 'rgba(36,5,242,.3)', //blue
-                c6: 'rgba(151,46,251,.3)' //purple
-            };
-            let colorArray = [colors.c0, colors.c1, colors.c2, colors.c3, colors.c4, colors.c5, colors.c6];
-            let colorArrayKeys = Object.keys(colors);
-            newDot.setAttribute('style', `border-bottom: 125px solid ${colorArray[randN]}`)
+            newDot.setAttribute('style', `border-bottom: 125px solid ${this.colorArray[randN]}`)
             newDot.setAttribute('class', 'dot3');
             newDot.setAttribute('id', `${randN}`); //unique dot number
             newDot.addEventListener('click', () => {
@@ -128,9 +120,8 @@ class Dot {
             });
             document.querySelector('html').appendChild(newDot);
         }
-    } 
-    
-    
+    }
+
     animateDot() {
         for (let i = 0; i <= 25; i++) {
             let currentDot = document.getElementById('id' + i);
