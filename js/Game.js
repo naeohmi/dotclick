@@ -1,9 +1,4 @@
 class Game {
-    constructor() {
-//        this.startScreen();
-        this.playStatus = true;
-        this.levelNum = 0;
-    }
     //make the start screen render
     //with welcome msg, game instructions, and start button to click 
     startScreen() {
@@ -31,10 +26,13 @@ class Game {
             goodByeOpen.remove();
             let startNow = new Play();
             startNow.playScreen();
-            startNow.key();
             startNow.info();
             startNow.timer();
             startNow.makeDots();
         });
+    }
+    endScreen() {
+        if 
+        
     }
 }
