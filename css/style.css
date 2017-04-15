@@ -1,18 +1,4 @@
 /*
-colors:
-red: rgba(232,0,0,1)
-bright yellow: rgba(255,255,0,1)
-bright-green: rgba(3,185,6,1)
-bright-blue(light): rgba(0,162,255,1)
-bright-blue(dark): rgba(36,5,242,1)
-bright-pink: rgba(255,69,203,1)
-
-orange: rgba(255,127,0,1)
-purple: rgba(151,46,251,1)
-light-teal: rgba(142,255,208,1)
-*/
-
-/*
 cube colors
 red/pink: rgba(254,56,69,1) 
 #FE3845
@@ -23,7 +9,6 @@ teal: rgba(101,227,183,1)
 white-ish: rgba(250,250,250,1)
 #FAFAFA
 */
-
 
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Quattrocento+Sans:400,400i,700,700i');
 html {
@@ -76,7 +61,7 @@ html {
     height: 100%;
     margin: 1vh;
     position: absolute;
-    background-image: url("/images/cube.gif");
+    background-image: url("images/cube.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;

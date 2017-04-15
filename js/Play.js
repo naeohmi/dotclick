@@ -34,7 +34,7 @@ class Play {
     timer() {
         if (document.body.contains(document.querySelector('#timer'))) {
             let timer = {};
-            timer.length = 0.2 * 60 * 1000;
+            timer.length = 0.5 * 60 * 1000;
             timer.count = function () {
                 let m = Math.floor(timer.length / (60 * 1000));
                 let s = (timer.length / 1000) - (m * 60);
