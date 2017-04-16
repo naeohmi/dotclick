@@ -7,7 +7,7 @@ class Game {
         open.innerHTML =
             `<h1>Welcome to:</h1>
              <img src="images/logo.png"><br /><br />
-             <p>Click the dots in the right order and advance to the next level!</p><br />
+             <p>Click the triangles for points, smaller triangles are worth more points. Click the dot for extra points!</p><br />
              <button id="start">Click to Start!</button>`;
         document.querySelector('header').appendChild(open);
         this.clickStart();
@@ -39,8 +39,8 @@ class Game {
         end.innerHTML = 
             `<h1>Game Over</h1>
              <img src="images/logo.png"><br /><br />
-             <p>Nice job!</p>
-             <button id=start>Click to Play Again</button>`
+             
+             <button id=start>Play Again</button>`
         document.querySelector('header').appendChild(end);
         this.clickStart();
     }

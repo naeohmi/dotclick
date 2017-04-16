@@ -68,6 +68,7 @@ class Dot {
             }, 1500, () => {
                 this.animation();
             });
+            
         };
     }
 
@@ -76,7 +77,7 @@ class Dot {
         for (let i = 0; i < 15; i++) {
             let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
-            newDot.setAttribute('style', `border-bottom: 50px solid ${this.colorArray[randN]}`)
+            newDot.setAttribute('style', `border-bottom: ${this.randomNum(30, 170)}px solid ${this.colorArray[randN]}`)
             newDot.setAttribute('class', 'dot1');
             newDot.setAttribute('id', `${randN}`); //unique dot number
             newDot.addEventListener('click', () => {
@@ -93,7 +94,7 @@ class Dot {
         for (let i = 0; i < 20; i++) {
             let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
-            newDot.setAttribute('style', `border-bottom: 100px solid ${this.colorArray[randN]}`)
+            newDot.setAttribute('style', `border-bottom: ${this.randomNum(70, 170)}px solid ${this.colorArray[randN]}`)
             newDot.setAttribute('class', 'dot2');
             newDot.setAttribute('id', `${randN}`); //unique dot number
             newDot.addEventListener('click', () => {
@@ -109,7 +110,7 @@ class Dot {
         for (let i = 0; i < 15; i++) {
             let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
-            newDot.setAttribute('style', `border-bottom: 150px solid ${this.colorArray[randN]}`)
+            newDot.setAttribute('style', `border-bottom: ${this.randomNum(120, 200)}px solid ${this.colorArray[randN]}`)
             newDot.setAttribute('class', 'dot3');
             newDot.setAttribute('id', `${randN}`); //unique dot number
             newDot.addEventListener('click', () => {
@@ -117,6 +118,23 @@ class Dot {
                 this.playStatus = true;
                 let scoreBoard = document.getElementById('score-board');
                 scoreBoard.innerHTML = `<p>score:${this.score += 1}</p>`;
+            });
+            document.querySelector('#playScreenId').appendChild(newDot);
+        }
+    }
+    makeDot4() {
+        for (let i = 0; i < 1; i++) {
+            let randN = this.randomNum(0, 8);
+            let newDot = document.createElement('span');
+            newDot.setAttribute('style', `background-color: rgba(101,227,183,.7)`);
+            
+            newDot.setAttribute('class', 'dot4');
+            newDot.setAttribute('id', `${randN}`); //unique dot number
+            newDot.addEventListener('click', () => {
+                newDot.setAttribute('class', 'clicked');
+                this.playStatus = true;
+                let scoreBoard = document.getElementById('score-board');
+                scoreBoard.innerHTML = `<p>score:${this.score += 7}</p>`;
             });
             document.querySelector('#playScreenId').appendChild(newDot);
         }

@@ -14,6 +14,7 @@ class Play {
         //maybe set timeout here to add as time goes
         getDots.makeDot2();
         getDots.makeDot3();
+        getDots.makeDot4();
         getDots.animation();
     }
 
