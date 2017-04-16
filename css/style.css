@@ -110,12 +110,11 @@ footer {
     height: 3vh;
     bottom: 0px;
     position: fixed;
-    background-color: rgba(0,0,0,.7);
     text-align: right;
 }
 footer p {
     font-size: 2vmin;
-    color: white;
+    color: black;
 }
 footer p a, span {
     color: rgba(142,255,208,1);
@@ -171,7 +170,6 @@ footer p a:hover {
 }
 .dot3:hover {
     animation: move1 5s infinite;
-    background-color: hotpink;
 }
 .dot4 {
     width: 40px;

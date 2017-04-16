@@ -39,7 +39,7 @@ class Game {
         end.innerHTML = 
             `<h1>Game Over</h1>
              <img src="images/logo.png"><br /><br />
-             
+             <p>Large triangles are +1 point, medium triangles are +2 points, small triangles are +3 points. The dot is +7! Have fun &hearts;<br /></p>
              <button id=start>Play Again</button>`
         document.querySelector('header').appendChild(end);
         this.clickStart();

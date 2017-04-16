@@ -44,7 +44,7 @@ class Dot {
     };
 
     animation() {
-        for (let i = 0; i <= 50; i++) {
+        for (let i = 0; i <= 60; i++) {
             let random = this.move();
             let dot1 = document.querySelectorAll('.dot1');
             let dot2 = document.querySelectorAll('.dot2');
@@ -74,10 +74,10 @@ class Dot {
 
     //make divs - each div is an individual dot with a random color
     makeDot1() {
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < 20; i++) {
             let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
-            newDot.setAttribute('style', `border-bottom: ${this.randomNum(30, 170)}px solid ${this.colorArray[randN]}`)
+            newDot.setAttribute('style', `border-bottom: ${this.randomNum(20, 150)}px solid ${this.colorArray[randN]}`)
             newDot.setAttribute('class', 'dot1');
             newDot.setAttribute('id', `${randN}`); //unique dot number
             newDot.addEventListener('click', () => {
@@ -94,7 +94,7 @@ class Dot {
         for (let i = 0; i < 20; i++) {
             let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
-            newDot.setAttribute('style', `border-bottom: ${this.randomNum(70, 170)}px solid ${this.colorArray[randN]}`)
+            newDot.setAttribute('style', `border-bottom: ${this.randomNum(100, 200)}px solid ${this.colorArray[randN]}`)
             newDot.setAttribute('class', 'dot2');
             newDot.setAttribute('id', `${randN}`); //unique dot number
             newDot.addEventListener('click', () => {
@@ -107,10 +107,10 @@ class Dot {
         }
     }
     makeDot3() {
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < 20; i++) {
             let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
-            newDot.setAttribute('style', `border-bottom: ${this.randomNum(120, 200)}px solid ${this.colorArray[randN]}`)
+            newDot.setAttribute('style', `border-bottom: ${this.randomNum(150, 250)}px solid ${this.colorArray[randN]}`)
             newDot.setAttribute('class', 'dot3');
             newDot.setAttribute('id', `${randN}`); //unique dot number
             newDot.addEventListener('click', () => {
@@ -141,7 +141,7 @@ class Dot {
     }
 
     animateDot() {
-        for (let i = 0; i <= 50; i++) {
+        for (let i = 0; i <= 60; i++) {
             let currentDot = document.getElementById('id' + i);
             this.animation(currentDot);
         }
