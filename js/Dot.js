@@ -52,20 +52,20 @@ class Dot {
 
             $(dot1[i]).animate({
                 top: random.nw ,
-                left: random.nh + 50
+                left: random.nh
             }, 2000, () => {
                 this.animation();
             });
             $(dot2[i]).animate({
                 top: random.nw,
-                left: random.nh + 70
-            }, 3000, () => {
+                left: random.nh
+            }, 2000, () => {
                 this.animation();
             });
             $(dot3[i]).animate({
                 top: random.nw,
-                left: random.nh + 50
-            }, 1500, () => {
+                left: random.nh
+            }, 2000, () => {
                 this.animation();
             });
             
