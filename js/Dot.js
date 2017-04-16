@@ -51,21 +51,21 @@ class Dot {
             let dot3 = document.querySelectorAll('.dot3');
 
             $(dot1[i]).animate({
-                top: random.nw ,
+                top: random.nw + 50,
                 left: random.nh
             }, 2000, () => {
                 this.animation();
             });
             $(dot2[i]).animate({
                 top: random.nw,
-                left: random.nh
-            }, 2000, () => {
+                left: random.nh + 35
+            }, 2100, () => {
                 this.animation();
             });
             $(dot3[i]).animate({
-                top: random.nw,
-                left: random.nh
-            }, 2000, () => {
+                top: random.nw + 20,
+                left: random.nh + 10
+            }, 1800, () => {
                 this.animation();
             });
             
@@ -73,7 +73,7 @@ class Dot {
     }
 
     //make divs - each div is an individual dot with a random color
-    makeDot1() {
+    smallT() {
         for (let i = 0; i < 20; i++) {
             let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
@@ -90,7 +90,7 @@ class Dot {
         }
     }
 
-    makeDot2() {
+    medT() {
         for (let i = 0; i < 20; i++) {
             let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
@@ -106,8 +106,8 @@ class Dot {
             document.querySelector('#playScreenId').appendChild(newDot);
         }
     }
-    makeDot3() {
-        for (let i = 0; i < 20; i++) {
+    largeT() {
+        for (let i = 0; i < 15; i++) {
             let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
             newDot.setAttribute('style', `border-bottom: ${this.randomNum(150, 250)}px solid ${this.colorArray[randN]}`)
@@ -122,7 +122,7 @@ class Dot {
             document.querySelector('#playScreenId').appendChild(newDot);
         }
     }
-    makeDot4() {
+    dot() {
         for (let i = 0; i < 1; i++) {
             let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');

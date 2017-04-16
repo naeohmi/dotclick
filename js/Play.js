@@ -10,18 +10,16 @@ class Play {
     }
     makeDots() {
         let getDots = new Dot();
-        getDots.makeDot1();
+        getDots.smallT();
         //maybe set timeout here to add as time goes
-        getDots.makeDot2();
-        getDots.makeDot3();
-        getDots.makeDot4();
+        getDots.medT();
+        getDots.largeT();
+        getDots.dot();
         getDots.animation();
     }
-
     randomNum(min, max) {
         return Math.round(Math.random() * (max - min) + min);
     }
-
     info() {
         let info = document.createElement('div');
         info.setAttribute('id', 'info');
@@ -36,7 +34,7 @@ class Play {
         if (document.body.contains(document.querySelector('#timer'))) {
             let timer = {};
             timer.length = 0.5 * 60 * 1000;
-            timer.count = function () {
+            timer.count = () => {
                 let m = Math.floor(timer.length / (60 * 1000));
                 let s = (timer.length / 1000) - (m * 60);
                 if (s < 10) {
