@@ -18,6 +18,9 @@ You have 30 seconds to get as many points as possible each round. Every element 
 - Dot = +7 points
 
 
+![logo](images/tri.png)
+
+
 ### Development Approach:
 
 When I started brainstorming for this project, I knew I wanted to build a game primarily with JavaScript, utilizing the new ES6 features like let/const, and ‘fat-arrow’. I wanted to use this project as an opportunity to practice using multiple classes, constructors, and iterating through objects. I also wanted to add vanilla JavaScript DOM manipulation, some interesting game logic, and animations using jQuery and SCSS, plus some bright fun moving colors!
