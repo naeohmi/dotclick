@@ -3,20 +3,22 @@
 html {
     background-color: #FAFAFA;
     color: white;
-    font-family: 'Roboto Mono', monospace;}
+    font-family: 'Roboto Mono', monospace;
+}
 .open {
-    width: 80vh;
-    height: 80vh;
+    width: 70%;
+    height: 70%;
+    background-color: #FE3845;
+    opacity: 1;
     text-align: center;
-    background-color: rgba(151,46,251,.8);
     margin: auto;
     display: block;
-    border-radius: 20%;
     color: white;
     align-content: center;
     font-family: 'Archivo Black';
 }
 .open h1 {
+    position: relative;
     margin-top: 50px;
     font-size: 8vmin;
     text-shadow: 3px 3px black;
@@ -27,18 +29,19 @@ html {
     text-align: center;
 }
 .open p {
+    position: relative;
     font-size: 20px;
     padding: 20px;
     font-family: sans-serif;
 }
 .open button {
+    position: relative;
     background-color: rgba(255,255,0,1);
     color: black;
     font-size: 30px;
     text-shadow: 1px 1px rgba(151,46,251,1);
     width: 30%;
-    height: 100px;
-    border-radius: 25%;
+    height: 80px;
     border: 1px solid white;
     font-family: monospace;
 }

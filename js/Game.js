@@ -8,7 +8,7 @@ class Game {
             `<h1>Welcome to:</h1>
              <img src="images/tri.png"><br /><br />
              <p>Click the triangles for points, smaller triangles are worth more points. Click the dot for extra points!</p><br />
-             <button id="start">Click to Start!</button>`;
+             <button id="start">start!</button>`;
         document.querySelector('header').appendChild(open);
         this.clickStart();
     }
