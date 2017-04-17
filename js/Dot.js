@@ -12,7 +12,7 @@ class Dot {
             c6: 'rgba(151,46,251,.8)', //purple
             c7: 'rgba(48,44,103,.7)', //cubeblue
             c8: 'rgba(0,0,0,.7)' //black
-        };
+        }
         this.colorArray = [
             this.colors.c0,
             this.colors.c1,
