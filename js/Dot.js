@@ -26,12 +26,13 @@ class Dot {
         ];
         this.colorArrayKeys = Object.keys(this.colors);
     }
+    //get a random number (found this method online)
     randomNum(min, max) {
         return Math.round(Math.random() * (max - min) + min);
     }
 
     //make the divs move, randomly around the screen
-    //up and down and left and right
+    //using jQuery, (this is mostly from Joe's class on Monday)
     move() {
         let h = $(window).height();
         let w = $(window).width();
@@ -42,7 +43,7 @@ class Dot {
             'nh': nh
         };
     };
-
+    //animated the divs at different rates and in slightly different places on the screen so they're more spread out
     animation() {
         for (let i = 0; i <= 60; i++) {
             let random = this.move();
@@ -72,7 +73,9 @@ class Dot {
         };
     }
 
-    //make divs - each div is an individual dot with a random color
+    //make divs - each div is an individual dot/triangle with a random color and random size, when clicked add to the score and display updated score
+    
+    //small triangles 
     smallT() {
         for (let i = 0; i < 20; i++) {
             let randN = this.randomNum(0, 8);
@@ -89,7 +92,7 @@ class Dot {
             document.querySelector('#playScreenId').appendChild(newDot);
         }
     }
-
+    //medium sized triangles
     medT() {
         for (let i = 0; i < 20; i++) {
             let randN = this.randomNum(0, 8);
@@ -106,6 +109,7 @@ class Dot {
             document.querySelector('#playScreenId').appendChild(newDot);
         }
     }
+    //largest triangles
     largeT() {
         for (let i = 0; i < 15; i++) {
             let randN = this.randomNum(0, 8);
@@ -122,6 +126,7 @@ class Dot {
             document.querySelector('#playScreenId').appendChild(newDot);
         }
     }
+    //one little dot
     dot() {
         for (let i = 0; i < 1; i++) {
             let randN = this.randomNum(0, 8);
@@ -139,14 +144,11 @@ class Dot {
             document.querySelector('#playScreenId').appendChild(newDot);
         }
     }
-
+    //animate all the divs on the screen
     animateDot() {
         for (let i = 0; i <= 60; i++) {
             let currentDot = document.getElementById('id' + i);
             this.animation(currentDot);
         }
-    }
-    finalScore() {
-        return this.score;
     }
 }

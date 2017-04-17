@@ -17,7 +17,7 @@ class Game {
         let screen = document.getElementById('open');
         screen.innerHTML = '';
     }
-
+    //when the start button is clicked, add the Play screen!
     clickStart() {
         let start = document.querySelector('#start');
         start.addEventListener('click', function () {
@@ -30,12 +30,12 @@ class Game {
             startNow.makeDots();
         });
     }
+    //when the timer runs out, add the end screen
     endScreen() {
         let goodBye = document.querySelector('main');
         goodBye.innerHTML = '';
         let end = document.createElement('div');
         end.setAttribute('class', 'open');
-
         end.innerHTML = 
             `<h1>Game Over</h1>
              <img src="images/tri.png"><br /><br />

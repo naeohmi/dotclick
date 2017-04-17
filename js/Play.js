@@ -1,13 +1,15 @@
 class Play {
     constructor() {
-        this.playScreen();
+        this.playScreen(); //immediately add the play screen
     }
     //sets up the screen during game play and renders it (will be initialized in Game.startClick())
     playScreen() {
         let playScreenId = document.createElement('div');
         playScreenId.setAttribute('id', 'playScreenId');
+        playScreenId.innerHTML = '<img src="/images/cube.gif">';
         document.querySelector('main').appendChild(playScreenId);
     }
+    //initialize the Dot class and render the dots/triangles on the screen
     makeDots() {
         let getDots = new Dot();
         getDots.smallT();
@@ -17,9 +19,11 @@ class Play {
         getDots.dot();
         getDots.animation();
     }
+    //random number (found this online)
     randomNum(min, max) {
         return Math.round(Math.random() * (max - min) + min);
     }
+    //adds the timer and score board to the screen
     info() {
         let info = document.createElement('div');
         info.setAttribute('id', 'info');
@@ -29,7 +33,7 @@ class Play {
              <div id="timer"></div`
         document.querySelector('aside').appendChild(info);
     }
-
+    //creates the timer and starts it at 30 seconds (I used this same function in my memory game)
     timer() {
         if (document.body.contains(document.querySelector('#timer'))) {
             let timer = {};
@@ -41,7 +45,6 @@ class Play {
                     s = '0' + s;
                 }
                 if (timer.length <= 0) {
-                    console.log('yes');
                     let end = new Game();
                     end.endScreen();
                     clearInterval(timer.countInt);
