@@ -69,12 +69,12 @@ class Dot {
             }, 1800, () => {
                 this.animation();
             });
-            
+
         };
     }
 
     //make divs - each div is an individual dot/triangle with a random color and random size, when clicked add to the score and display updated score
-    
+
     //small triangles 
     smallT() {
         for (let i = 0; i < 20; i++) {
@@ -132,7 +132,7 @@ class Dot {
             let randN = this.randomNum(0, 8);
             let newDot = document.createElement('span');
             newDot.setAttribute('style', `background-color: rgba(101,227,183,.7)`);
-            
+
             newDot.setAttribute('class', 'dot4');
             newDot.setAttribute('id', `${randN}`); //unique dot number
             newDot.addEventListener('click', () => {

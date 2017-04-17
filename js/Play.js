@@ -51,7 +51,7 @@ class Play {
                 }
                 timer.length -= 1000;
                 document.querySelector('#timer').innerHTML =
-                    `<p>${m} : ${s}</p>`;
+                    `<p>${m}:${s}</p>`;
             }
             timer.countInt = setInterval(timer.count, 1000);
         }

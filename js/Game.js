@@ -20,9 +20,8 @@ class Game {
     //when the start button is clicked, add the Play screen!
     clickStart() {
         let start = document.querySelector('#start');
-        start.addEventListener('click', function () {
-            console.log('yay');
-            let goodByePop = document.querySelector(".open");
+        start.addEventListener('click', () => {
+            let goodByePop = document.querySelector('.open');
             goodByePop.remove();
             let startNow = new Play();
             startNow.info();
