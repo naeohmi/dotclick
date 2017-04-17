@@ -6,8 +6,8 @@ class Game {
         open.setAttribute('class', 'open');
         open.innerHTML =
             `<h1>Welcome to:</h1>
-             <img src="images/tri.png"><br /><br />
-             <p>Click the triangles for points, smaller triangles are worth more points. Click the dot for extra points!</p><br />
+             <img src="images/tri.png">
+             <p>Click the triangles for points, smaller triangles are worth more points. Click the dot for extra points!</p>
              <button id="start">start!</button>`;
         document.querySelector('header').appendChild(open);
         this.clickStart();
@@ -38,7 +38,7 @@ class Game {
         end.setAttribute('class', 'open');
         end.innerHTML = 
             `<h1>Game Over</h1>
-             <img src="images/tri.png"><br /><br />
+             <img src="images/tri.png">
              <p>Large triangles are +1 point, medium triangles are +2 points, small triangles are +3 points. The dot is +7! Have fun &hearts;<br /></p>
              <button id=start>Play Again</button>`
         document.querySelector('header').appendChild(end);

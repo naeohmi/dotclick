@@ -6,7 +6,7 @@ class Play {
     playScreen() {
         let playScreenId = document.createElement('div');
         playScreenId.setAttribute('id', 'playScreenId');
-        playScreenId.innerHTML = '<img src="/images/cube.gif">';
+        playScreenId.innerHTML = '<img src="images/cube.gif">';
         document.querySelector('main').appendChild(playScreenId);
     }
     //initialize the Dot class and render the dots/triangles on the screen

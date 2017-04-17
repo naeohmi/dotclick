@@ -4,13 +4,13 @@ class Dot {
         this.score = 0;
         this.colors = {
             c0: 'rgba(232,0,0,.8)', //red
-            c1: 'rgba(255,69,203,.9)', //pink
+            c1: 'rgba(255,69,203,.8)', //pink
             c2: 'rgba(254,56,69,.8)', //cubered 
-            c3: 'rgba(255,255,0,.9)', //yellow
-            c4: 'rgba(101,227,183,.9)', //cubeteal
-            c5: 'rgba(36,5,242,.8)', //blue
-            c6: 'rgba(151,46,251,.9)', //purple
-            c7: 'rgba(48,44,103,.8)', //cubeblue
+            c3: 'rgba(255,255,0,.8)', //yellow
+            c4: 'rgba(101,227,183,.8)', //cubeteal
+            c5: 'rgba(36,5,242,.7)', //blue
+            c6: 'rgba(151,46,251,.8)', //purple
+            c7: 'rgba(48,44,103,.7)', //cubeblue
             c8: 'rgba(0,0,0,.7)' //black
         };
         this.colorArray = [
