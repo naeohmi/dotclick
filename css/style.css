@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black|Roboto+Mono:300,400,400i,500,500i,700,700i');
 
+@media screen and (max-device-width: 600px) {
+    .open p {
+      display: none;
+    }   
+}
 html {
     background-color: #FAFAFA;
     color: white;
@@ -163,6 +168,15 @@ footer p a:hover {
     z-index: 1;
     border-radius: 50%;
 }
+.dot5 {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    animation: move4 5s infinite;
+    z-index: 1;
+    border-radius: 50%;
+    
+}
 @keyframes move1 {
   25% {
     transform: rotate(360deg);
@@ -197,6 +211,28 @@ footer p a:hover {
         bottom: 110%;
     }   
 }
+@keyframes move4 {
+    0% {
+        right: -30%
+    }
+    25% {
+        right: 50%;
+        bottom: 20%;
+    }
+    50% {
+        right: 70%;
+        bottom: 40%;
+    }
+    75% {
+        right: 90%;
+        bottom: 95%;
+    }
+    100% {
+        right: 110%;
+        bottom: -110%;
+    }   
+}
 .clicked {
     transition: all 0.3s;
 }
+

@@ -69,7 +69,6 @@ class Dot {
             }, 1800, () => {
                 this.animation();
             });
-
         };
     }
 
@@ -143,6 +142,26 @@ class Dot {
             });
             document.querySelector('#playScreenId').appendChild(newDot);
         }
+    }
+        
+        
+    dot2() {
+        for (let i = 0; i < 1; i++) {
+            let randN = this.randomNum(0, 8);
+            let newDot = document.createElement('span');
+            newDot.setAttribute('style', `background-color: rgba(254,56,69,.6)`);
+
+            newDot.setAttribute('class', 'dot5');
+            newDot.setAttribute('id', `${randN}`); //unique dot number
+            newDot.addEventListener('click', () => {
+                newDot.setAttribute('class', 'clicked');
+                this.playStatus = true;
+                let scoreBoard = document.getElementById('score-board');
+                scoreBoard.innerHTML = `<p>score:${this.score += 8}</p>`;
+            });
+            document.querySelector('#playScreenId').appendChild(newDot);
+        }
+    
     }
     //animate all the divs on the screen
     animateDot() {

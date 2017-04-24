@@ -17,6 +17,7 @@ class Play {
         getDots.medT();
         getDots.largeT();
         getDots.dot();
+        getDots.dot2();
         getDots.animation();
     }
     //random number (found this online)
