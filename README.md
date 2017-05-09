@@ -1,4 +1,5 @@
 # Triangle Dot Click Game
+## Play Here: https://naeohmi.github.io/dotclick/
 
 ![logo](images/tri.png)
 
